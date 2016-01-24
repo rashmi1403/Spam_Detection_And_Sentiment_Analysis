@@ -1,0 +1,255 @@
+CSCI 544 - Assignment 2 - Rashmi Vijaya Prasad [USC ID: 3569283510]
+-----------------------------------------------------------------------------------------
+TASK 1 - 75% training data & 25% development data
+-----------------------------------------------------------------------------------------
+ --> I have listed the precison, recall and f1 scores for Positive & Negative classes of 
+sentiment analysis and Spam & Ham classes of Spam detection.
+
+--> In each case, which technique performs best?
+	Looking at the F1 scores of the techniques, for IMDB reviews Megam performs well and for emails 
+	Naive Bayes performs well.
+
+--> Based on class discussions, why do think this is? 
+	For sentiment analysis because Maximum Entropy Model is a Discriminative model and does not make 
+	the assumption that the features are independent of each other as in Naive Bayes. It chooses a 
+	model that is consistest with all facts, but otherwise as uniform as possible. This helps in IMDB 
+	reviews as we need to consider the 'Negation effect'. 
+	And in case of spam detection, Naive Bayes is a simple classifier that takes into account the 
+	features and assigns probability to them. As spam data contains a certain words that generally 
+	occur in them, for eg: bank, account, Nigeria, money, transfer, etc., we can assign probabilities 
+	without them depending on other features.
+
+
+--> How does performance differ between SPAM detection and sentiment analysis?
+	The performance of SPAM detection is better than sentiment analysis. This maybe because the number 
+	of training sample for spam detection was comparatively larger. Also in sentiment analysis, its 
+	difficult to classify as the effect of negation plays a role. For ex: It was Not a good movie .Vs. 
+	It was a good movie. And also the positive tag for one entity maybe a negative tag for the other. 
+	Eg: When comparing 2 movies, if it states that one movie is better than the other. So it becomes 
+	difficult to ascertain the sentiments here.
+
+-----------------------------------------------------------------------------------------
+Naive Bayes with Sentiment Data 
+
+Results
+
+precision_positive = 0.8737320741518013 = 87.37%
+recall_positive    = 0.8107757221681272 = 81.07%
+f1score_positive   = 0.841077441077441  = 84.10%
+
+precision_negative = 0.8280743143615452 = 82.80%
+recall_negative    = 0.8860839381508362 = 88.60%
+f1score_negative   = 0.8560975609756096 = 85.60%
+
+-----------------------------------------------------------------------------------------
+Naive Bayes with Email Data
+
+Results
+
+precision_spam = 0.9810781863620136 = 98.10%
+recall_spam    = 0.9906272530641672 = 99.06%
+f1score_spam   = 0.9858295964125561 = 98.58%
+
+precision_ham  = 0.9905454545454545 = 99.05%
+recall_ham     = 0.9809146561037091 = 98.09%
+f1score_ham    = 0.9857065315722815 = 98.57%
+
+-----------------------------------------------------------------------------------------
+SVM with Sentiment Data
+
+Result
+precision_positive = 0.8558023146700031 = 85.58%
+recall_positive    = 0.8880233690360273 = 88.80%
+f1score_positive   = 0.8716151640649888 = 87.16%
+
+precision_negative = 0.8869963969865706 = 88.69%
+recall_negative    = 0.8545282423477437 = 85.45%
+f1score_negative   = 0.8704596592735454 = 87.04%
+
+-----------------------------------------------------------------------------------------
+SVM with Email Data
+
+Result
+precision_spam = 0.9292691141798586 = 92.92%
+recall_spam    = 0.994592645998558  = 99.45%
+f1score_spam   = 0.9608218701027338 = 96.08%
+
+precision_ham  = 0.9941905499612703 = 99.41%
+recall_ham     = 0.9243788260713 	= 92.43%
+f1score_ham    = 0.9580145549542826 = 95.80%
+
+-----------------------------------------------------------------------------------------
+MegaM with Sentiment Data
+
+Result
+precision_positive = 0.8748399487836107 = 87.48%
+recall_positive    = 0.887049659201558  = 88.70%
+f1score_positive   = 0.8809024979854956 = 88.09%
+
+precision_negative = 0.8886756238003839 = 88.86%
+recall_negative    = 0.8766172294099085 = 87.66%
+f1score_negative   = 0.8826052422557586 = 88.26%
+
+-----------------------------------------------------------------------------------------
+MegaM with Email Data
+
+Result 
+precision_spam = 0.9731353835277483 = 97.31%
+recall_spam    = 0.9924297043979813 = 99.24%
+f1score_spam   = 0.9826878457968946 = 98.26%
+
+precision_ham = 0.9922850844966936 = 99.22%
+recall_ham    = 0.9726323370543752 = 97.26%
+f1score_ham   = 0.9823604291689397 = 98.23%
+
+-----------------------------------------------------------------------------------------
+Task 2 - 25% training data & 75% dev data
+-----------------------------------------------------------------------------------------
+--> I have listed the precison, recall and f1 scores for Positive & Negative classes of 
+sentiment analysis and Spam & Ham classes of Spam detection.
+
+-->How much did performance drop for each of the machine learning techniques? 
+   The performance did drop a little, maybe about 1%-3% but not drastically.
+
+-->Were some machine learning techniques more robust given a smaller training set? 
+   I felt all of them were pretty robust even with a small amount of training data.
+   I have got F1 scores above 80% for Sentiment analysis and above 88% for spam
+   detection which is pretty good in real world.
+   
+
+-->Is there a difference between SPAM detection and sentiment analysis?
+   Yes, Spam detection performs better here too.
+
+
+
+-----------------------------------------------------------------------------------------
+Naive Bayes with Sentiment Data
+
+Results
+precision_positive = 0.8617784356142548 = 86.17%
+recall_positive    = 0.8035884913472768 = 80.35%
+f1score_positive   = 0.8316668497967257 = 83.16%
+
+precision_negative = 0.8143874786796428 = 81.43%
+recall_negative    = 0.8698960454399314 = 86.98%
+f1score_negative   = 0.8412270701627111 = 84.12%
+
+-----------------------------------------------------------------------------------------
+Naive Bayes with Email Data
+
+Results
+precision_spam = 0.977474807350326  = 97.74%
+recall_spam    = 0.9818982970108372 = 98.18%
+f1score_spam   = 0.9796815589353612 = 97.96%
+
+precision_ham  = 0.9815040155755659 = 98.15%
+recall_ham     = 0.9769864341085271 = 97.69%
+f1score_ham    = 0.9792400145684109 = 97.92%
+
+-----------------------------------------------------------------------------------------
+SVM with Sentiment Data
+
+Result
+precision_positive = 0.8351946560901785 = 83.51%
+recall_positive    = 0.8495594012103196 = 84.95%
+f1score_positive   = 0.8423157894736842 = 84.23%
+
+precision_negative = 0.8454575199040244 = 84.54%
+recall_negative    = 0.8307791233522667 = 83.07%
+f1score_negative   = 0.838054054054054  = 83.80%
+
+-----------------------------------------------------------------------------------------
+SVM with Email Data
+
+Result
+precision_spam = 0.902624159618304  = 90.26%
+recall_spam    = 0.9913064189591521 = 99.13%
+f1score_spam   = 0.9448890402406492 = 94.48%
+
+precision_ham = 0.9901762885210604 = 99.01%
+recall_ham    = 0.8912306201550387 = 89.12%
+f1score_ham   = 0.938101612800408  = 93.81%
+
+-----------------------------------------------------------------------------------------
+MegaM with Sentiment Data
+
+Result 
+precision_positive = 0.8536402569593148	= 85.36%
+recall_positive    = 0.8464805181017093 = 84.64%
+f1score_positive   = 0.8500453115837731 = 85.00%
+
+precision_negative = 0.8463336875664187 = 84.63%
+recall_negative    = 0.8534990890579788 = 85.34%
+f1score_negative   = 0.8499012859505896 = 84.99%
+
+-----------------------------------------------------------------------------------------
+MegaM with Email Data
+
+Result
+
+precision_spam = 0.887057974500842  = 88.70%
+recall_spam    = 0.8782898654281291 = 87.82%
+f1score_spam   = 0.8826521452935193 = 88.26%
+
+precision_ham = 0.8774433385297997  = 87.74%
+recall_ham    = 0.8862645348837209  = 88.62%
+f1score_ham   = 0.881831877071407   = 88.18%
+
+-----------------------------------------------------------------------------------------
+Task 3 - 100% training data
+-----------------------------------------------------------------------------------------
+
+--> Ran the learner on 100% data and classifier on the test/ unlabelled data
+
+--> Uploaded all the model and output files to bitbucket
+
+
+-----------------------------------------------------------------------------------------
+How to RUN the programs:
+-----------------------------------------------------------------------------------------
+Note - All files needed as inputs and outputs are considered to be in the same folder as the
+       program being executed
+
+-->nblearn.py
+   RUN - python3 nblearn.py trainingdata_file model_file
+
+-->nbclassify.py
+   RUN - python3 nbclassify.py model_file test_file > output_file
+
+------------------------------------------
+Preprocessing & Postprocessing Programs
+------------------------------------------
+
+--> calculate_score.py: To calculate precision, recall and f1 scores
+	RUN - python3 calculate_score.py output_file_with_labels_on_each_line actual_file_with_results 
+
+--> preprocess_imdb.py: Incrementing the feature index by 1 and  changing scores to labels
+	RUN - python3 preprocess_imdb.py feature_file output_file
+
+--> preprocess_spam.py: Converting mails in text files in folders to Project data format 
+	RUN - python3 preprocess_spam.py vocab_file Path_of_directory_containing_files output_file
+
+--> split_imdb.py: Splits data in 75% and 25%
+	RUN - python3 split_imdb.py full_data_file 75%_data_file 25%_data_file
+
+--> split_spam.py: Splits data in 75% and 25%
+	RUN - python3 split_spam.py full_data_file 75%_data_file 25%_data_file
+
+--> change_testDocToSVM.py: Add feature labels from missing test file
+	RUN - python3 change_testDocToSVM.py input_file output_file
+
+--> change_testDocToMegam.py: Add feature labels from missing test file
+	RUN - python3 change_testDocMegam.py input_file output_file
+
+--> remove_colon.py: Replace colon's by spaces for Megam
+	RUN - python3 remove_colon.py input_file output_file
+
+Note - Some preprocessing like changing POSITIVE/ SPAM to +1 and NEGATIVE/ HAM to -1 or 0
+  	   were done manually. 
+
+
+-----------------------------------------------------------------------------------------
+General Notes:
+
+- All the training data feature indexes start from 1 and not 0 in IMDB reviews and Spam detection.
+
